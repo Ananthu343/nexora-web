@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const projects = [
   { id: 1, title: 'Lumina Rebrand', category: 'Branding', image: 'https://images.pexels.com/photos/5706015/pexels-photo-5706015.jpeg?auto=compress&cs=tinysrgb&h=650&w=940' },

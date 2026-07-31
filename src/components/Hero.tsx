@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Sphere, Line } from '@react-three/drei';
+import { Sphere, Line } from '@react-three/drei';
 import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 

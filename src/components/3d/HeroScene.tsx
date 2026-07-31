@@ -64,8 +64,6 @@ const SceneContent = () => {
 };
 
 const Line = ({ start, end }: { start: THREE.Vector3, end: THREE.Vector3 }) => {
-  const lineRef = useRef<THREE.Line>(null);
-  
   const geometry = useMemo(() => {
     const geo = new THREE.BufferGeometry().setFromPoints([start, end]);
     return geo;
@@ -77,7 +75,9 @@ const Line = ({ start, end }: { start: THREE.Vector3, end: THREE.Vector3 }) => {
     opacity: 0.15 
   }), []);
 
-  return <line ref={lineRef} geometry={geometry} material={material} />;
+  const lineObj = useMemo(() => new THREE.Line(geometry, material), [geometry, material]);
+
+  return <primitive object={lineObj} />;
 };
 
 const HeroScene = () => {

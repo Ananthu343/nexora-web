@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Target, Telescope, Users } from 'lucide-react';
+import { Target, Telescope } from 'lucide-react';
 
 const About = () => {
   return (
@@ -136,7 +136,6 @@ const Counter = ({ value, isInView }: { value: number, isInView: boolean }) => {
   useEffect(() => {
     if (!isInView || !ref.current) return;
     
-    let start = 0;
     const end = value;
     const duration = 1500;
     let startTime: number | null = null;

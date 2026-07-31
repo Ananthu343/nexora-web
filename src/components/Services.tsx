@@ -70,8 +70,8 @@ const Services = () => {
         </div>
 
         <div className="flex flex-col gap-8">
-          {servicesList.map((service, index) => (
-            <ServiceRow key={service.num} service={service} index={index} />
+          {servicesList.map((service) => (
+            <ServiceRow key={service.num} service={service} />
           ))}
         </div>
       </div>
@@ -79,7 +79,7 @@ const Services = () => {
   );
 };
 
-const ServiceRow = ({ service, index }: { service: any, index: number }) => {
+const ServiceRow = ({ service }: { service: any }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
